@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Google Sans Code', Arial;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #57564F;
+  height: 2000px;
+}
+
+.header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 0 50px;
+  background-color: #57564F;
+}
+
+.logo {
+  width: 300px;
+  text-decoration: none;
+  color: #DDDAD0;
+  font-family: 'Playwrite AU NSW', Arial;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-bar ul li {
+  font-weight: 500;
+  margin-right: 30px;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #DDDAD0;
+}
+
+.home {
+  width: 100%;
+  color: #F8F3CE;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
+.left-content {
+  width: 600px;
+  padding-left: 80px;
+  flex: 1;
+}
+
+.left-content img{
+  height: 30px;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: .5;
+  color: #7A85C1;
+}
+
+.role {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #DDDAD0;
+}
+
+.content {
+  font-weight: 500;
+  margin: 1.5rem 0;
+}
+
+.download-btn {
+  background-color: #7A85C1;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #7A85C1;
+  border-radius: 16px;
+  padding: 8px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+
+.right-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 50px;
+  flex: 1;
+}
+
+.right-image{
+  height: 350px;
+  width: 350px;
+  object-position: center;
+  border-radius: 50%;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, );
+}
+
+.about {
+  color: #DDDAD0;
+  width: 90%;
+  margin: 0 auto;
+  height: 100px;
+  padding: 0 100px;
+  border-top: 1px solid #DDDAD0;
+}
+
+.about-me {
+  color: #7A85C1;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.about-sections {
+  color: #F8F3CE;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-section {
+  display: flex;
+}
+
+.skills-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+}
+
+
+.about-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 50px;
+  margin: 50px 0;
+}
+
+.about-left-side {
+  flex: 1;
+}
+
+.about-left-content {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.about-right-side {
+  flex: 1;
+}
+
+.about-right-content {
+  flex: 1;
+}
+
+.skills-section {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skills-container {
+  width: 200px;
+  height: 120px;
+  border: 2px solid #7A7A73;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.icon {
+  background-color: transparent;
+  width: 40px;
+}
+
+.stack {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .left-content, .right-content {
+    max-width: 90%;
+    padding: 20px;
+  }
+  .right-image {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+  }
+  .about {
+    margin: 0 20px;
+  }
+  .about-sections {
+    text-align: center;
+  }
+  .about-section {
+    flex-direction: column;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .skills-section{
+    margin: 0;
+  }
+  .skills-side {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-sections {
+    margin: 0;
+  }
+  .about {
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  
+  .skills-section {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+  .skills-container {
+  
+  }
+  .skills-container .icon {
+    width: 40px;
+    height: 40px;
+  }
+}
