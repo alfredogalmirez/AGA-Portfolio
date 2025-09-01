@@ -48,6 +48,11 @@ body {
 .nav-bar ul li a {
   text-decoration: none;
   color: #DDDAD0;
+  white-space: nowrap;
+}
+
+.nav-bar ul li a:hover {
+  color: #7A85C1;
 }
 
 .home {
@@ -124,7 +129,7 @@ body {
 .about {
   color: #DDDAD0;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 0 80px;
 }
 
 .about-me {
@@ -135,9 +140,10 @@ body {
 
 .about-sections {
   color: #F8F3CE;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  margin: 50px;
 }
 
 .skills-side {
@@ -230,6 +236,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+
 }
 
 .project-sections {
@@ -255,14 +262,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   gap: 1.5rem;
   border: 2px solid #7A7A73;
   border-radius: 3rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+}
 
+.project-container p {
+  flex-grow: 1;
 }
 
 .project-container:hover {
@@ -276,6 +286,19 @@ body {
   border-radius: 1rem;
 }
 
+.demo-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.demo-btn:hover {
+  background-color: black;
+  color: #DDDAD0;
+}
+
 /* RESPONSIVENESS */
 @media (max-width: 1110px) {
   .name { 
@@ -283,6 +306,13 @@ body {
   }
   .role {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 835px) {
+  .skills-side {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -340,6 +370,12 @@ body {
   .skills-side {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .nav-bar ul li {
+    padding-right: 15px;
   }
 }
 
